@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       flash[:success] = 'ユーザを登録しました。'
       redirect_to root_path
     else
-      flash[:danger] = 'ユーザの登録に失敗しました。'
+      flash[:danger] = 'ユーザの登録に失敗しました。いずれかの項目が正しく入力されていません。'
       render :new
     end
   end

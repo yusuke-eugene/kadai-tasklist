@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
       flash[:success] = 'ログインに成功しました。'
       redirect_to root_path
     else
-      flash.now[:danger] = 'ログインに失敗しました。'
+      flash.now[:danger] = 'ログインに失敗しました。EmailまたはPasswordの内容が正しくありません。'
       render  :new
     end
   end
